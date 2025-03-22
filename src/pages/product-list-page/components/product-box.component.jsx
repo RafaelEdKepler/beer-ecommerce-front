@@ -1,14 +1,17 @@
 import { Plus } from "@phosphor-icons/react";
 import { ButtonAddToCart, ProductBoxContainer } from "./style";
-import Budweiser from "../../../assets/budweiser.png";
 
 export default function ProductBoxComponent({
   brand,
   image,
-  price
+  price,
+  id,
+  onClick
 }) {
   return (
-    <ProductBoxContainer>
+    <ProductBoxContainer
+      onClick={() => onClick(id)}
+    >
       <h3>{brand}</h3>
       <img src={image} />
       <div>

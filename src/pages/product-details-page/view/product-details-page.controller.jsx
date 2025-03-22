@@ -1,7 +1,7 @@
 import HeaderComponent from "../../../components/header/header.component";
-import { BagIcon, CartComponentContainer, CentralizedWhitePageContainer, DescriptionContainer, ProductDetailsContainer, ProductImageContainer, ProductTextDetailsContainer, SizeChip, SizeContainer, TitleAndPriceContainer } from "../styles";
-import Budweiser from "../../../assets/budweiser.png";
-import { Handbag } from "@phosphor-icons/react";
+import { CentralizedWhitePageContainer, ProductDetailsContainer, ProductImageContainer } from "../styles";
+import ProductDataComponent from "../components/product-data.component";
+import AddToCartComponent from "../components/add-to-cart.component";
 
 
 export default function ProductDetailsPageView({ data, selectedSize, onShowPrice, onChangeSelectedSize }) {
@@ -15,40 +15,13 @@ export default function ProductDetailsPageView({ data, selectedSize, onShowPrice
             <ProductImageContainer>
               <img src={data.product.image} />
             </ProductImageContainer>
-            <ProductTextDetailsContainer>
-              <TitleAndPriceContainer>
-                <div>
-                  <h2>{data.product.brand}</h2>
-                  <span>Origin: {data.product.origin} | Stock: {data.sizes[selectedSize].stock}</span>
-                </div>
-                <h3>{onShowPrice()}</h3>
-              </TitleAndPriceContainer>
-              <DescriptionContainer>
-                <h2>Description</h2>
-                <p>
-                  {data.product.information}
-                  <b>Read more</b>
-                </p>
-              </DescriptionContainer>
-              <SizeContainer>
-                <h2>Size</h2>
-                <div>
-                  {data.product.skus.map((size, index) => (
-                    <SizeChip key={size.name} onClick={() => onChangeSelectedSize(index)} selected={index === selectedSize}>
-                      <span>{size.name}</span>
-                    </SizeChip>
-                  ))}
-                </div>
-              </SizeContainer>
-            </ProductTextDetailsContainer>
-            <CartComponentContainer>
-              <BagIcon>
-                <Handbag />
-              </BagIcon>
-              <button>
-                Add to cart
-              </button>
-            </CartComponentContainer>
+            <ProductDataComponent
+              data={data}
+              selectedSize={selectedSize}
+              onShowPrice={onShowPrice}
+              onChangeSelectedSize={onChangeSelectedSize}
+            />
+            <AddToCartComponent />
           </ProductDetailsContainer>
         )}
       </CentralizedWhitePageContainer>

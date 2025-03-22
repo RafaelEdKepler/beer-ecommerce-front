@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BreathingSphere, LoadingContainer, ParticleOne, ParticleThree, ParticleTwo, SpinnerContainer } from "./style";
-import { useProducts } from "./hooks/useProducts";
+import { useProducts } from "../../hooks/useProducts";
+
 
 export default function LoadingPortal() {
   const { isLoading } = useProducts();
