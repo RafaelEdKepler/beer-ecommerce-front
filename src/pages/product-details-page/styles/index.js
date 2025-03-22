@@ -167,7 +167,7 @@ export const SizeContainer = styled.div`
 `;
 
 export const SizeChip = styled.div`
-  width: 5.5rem;
+  width: 5.7rem;
   height: 2rem;
   display: flex;
   justify-content: center;
@@ -178,6 +178,7 @@ export const SizeChip = styled.div`
   color: ${props => props.selected ? props.theme.colors['golden-700'] : props.theme.colors['gray-400']};
   border-radius: 15.5px;
   transition: 0.2s;
+  padding: 0.1rem;
 
   span {
     font-size: 0.75rem;

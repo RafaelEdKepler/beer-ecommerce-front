@@ -2,7 +2,8 @@ import HeaderComponent from "../../../components/header/header.component";
 import ProductBoxComponent from "../components/product-box.component";
 import { ProductListContainer, ProductsGridContainer, TitlePageContainer } from "../styles";
 
-export default function ProductListPageView() {
+export default function ProductListPageView({ list }) {
+
   return (
     <ProductListContainer>
       <HeaderComponent />
@@ -12,17 +13,14 @@ export default function ProductListPageView() {
         <h3>Our Products</h3>
       </TitlePageContainer>
       <ProductsGridContainer>
-        <ProductBoxComponent />
-        <ProductBoxComponent />
-        <ProductBoxComponent />
-        <ProductBoxComponent />
-        <ProductBoxComponent />
-        <ProductBoxComponent />
-        <ProductBoxComponent />
-        <ProductBoxComponent />
-        <ProductBoxComponent />
-        <ProductBoxComponent />
-        <ProductBoxComponent />
+        {list && list.map((product) => (
+          <ProductBoxComponent
+            key={product.id}
+            brand={product.brand}
+            image={product.image}
+            price="$23.30"
+          />
+        ))}
       </ProductsGridContainer>
     </ProductListContainer>
   )
