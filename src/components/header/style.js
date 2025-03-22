@@ -17,4 +17,9 @@ export const HeaderContainer = styled.div`
     height: 2.9rem;
     border-radius: 999px;
   }
+
+  span {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
 `
