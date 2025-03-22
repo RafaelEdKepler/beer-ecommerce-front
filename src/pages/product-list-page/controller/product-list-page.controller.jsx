@@ -1,18 +1,13 @@
-import { productsList } from "../../../mocks/products";
+import { useProducts } from "../../../hooks/useProducts";
 import ProductListPageView from "../view/product-list-page.view";
-import { useEffect, useState } from "react";
 
 export default function ProductListPageController() {
-
-  const [list, setList] = useState();
-
-  useEffect(() => {
-    setList(productsList)
-  }, [])
+  const { data, isLoading, error } = useProducts();
 
   return (
     <ProductListPageView
-      list={list}
+      list={data}
+      isLoading={isLoading}
     />
   )
 }
