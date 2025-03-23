@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import ErrorComponent from "../../../components/error/error.component";
 import HeaderComponent from "../../../components/header/header.component";
 import LoadingPortal from "../../../components/loading/loading.component";
@@ -6,17 +7,29 @@ import { ProductListContainer, ProductsGridContainer, TitlePageContainer } from 
 
 export default function ProductListPageView({ list, isLoading, error, onTryAgain, onClickProduct }) {
 
+  const { t } = useTranslation("product-list");
+
   if (isLoading) {
     return <LoadingPortal />
   }
+
+  /*
+  "product-list": {
+    "hi": "Hi, {{name}}",
+    "welcome-back": "Welcome Back!",
+    "our-products": "Our Products"
+  }
+  */
 
   return (
     <ProductListContainer>
       <HeaderComponent />
       <TitlePageContainer>
-        <span>Hi Mr. Michael,</span>
-        <h2>Welcome Back!</h2>
-        <h3>Our Products</h3>
+        <span>{t("hi", {
+          name: "Mr. Michael"
+        })}</span>
+        <h2>{t("welcome-back")}</h2>
+        <h3>{t("our-products")}</h3>
       </TitlePageContainer>
       {!error ? (
         <ProductsGridContainer>

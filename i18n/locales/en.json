@@ -1,0 +1,19 @@
+{
+  "product-details": {
+    "add-to-cart": "Add to cart",
+    "origin": "Origin: ",
+    "stock": "Stock: ",
+    "description": "Description",
+    "see-less": "See less",
+    "read-more": "Read more",
+    "size": "Size"
+  },
+  "product-list": {
+    "hi": "Hi, {{name}},",
+    "welcome-back": "Welcome Back!",
+    "our-products": "Our Products"
+  },
+  "error": {
+    "something-went-wrong": "Something went wrong... :("
+  }
+}

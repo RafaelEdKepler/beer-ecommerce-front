@@ -9,7 +9,7 @@ import LoadingPortal from "../../../components/loading/loading.component";
 export default function ProductDetailsPageView({ product, onTryAgain, error, sizes, isLoading, selectedSize, onShowPrice, onChangeSelectedSize, onExpandText, expandedText }) {
 
 
-  if (!isLoading) {
+  if (isLoading) {
     return (
       <LoadingPortal />
     )
