@@ -1,14 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BreathingSphere, LoadingContainer, ParticleOne, ParticleThree, ParticleTwo, SpinnerContainer } from "./style";
-import { useProducts } from "../../hooks/useProducts";
 
 
 export default function LoadingPortal() {
-  const { isLoading } = useProducts();
-
-  if (!isLoading) return null;
-
   return ReactDOM.createPortal(
     <LoadingContainer>
       <SpinnerContainer >
@@ -17,7 +12,7 @@ export default function LoadingPortal() {
           <ParticleTwo />
           <ParticleThree />
         </BreathingSphere>
-        <p>Por favor, aguarde...</p>
+        <p>Please, wait...</p>
       </SpinnerContainer>
     </LoadingContainer>, document.getElementById("loading-root")
   );

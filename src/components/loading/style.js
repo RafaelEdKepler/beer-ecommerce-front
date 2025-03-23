@@ -25,17 +25,19 @@ export const SpinnerContainer = styled.div`
     font-size: 1.2rem;
     font-weight: bold;
     margin-top: 1rem;
-    color: #ffffff;
+    color: ${props => props.theme.colors["white"]};
   }
 `;
 
 export const BreathingSphere = styled.div`
-  width: 80px; /* Reduziu o tamanho da esfera */
-  height: 80px; /* A altura também foi reduzida */
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  background: linear-gradient(45deg, #ff9f24, #e6b800); /* Dourado para amarelo */
+  background: linear-gradient(45deg, ${props => props.theme.colors['golden-700']}, ${props => props.theme.colors['golden-500']});
   position: relative;
-  animation: breathe 2s infinite, changeColor 3s infinite;
+  border: solid;
+  border-color: ${props => props.theme.colors['gray-400']};
+  animation: breathe 2s infinite;
   margin-bottom: 1rem;
   display: flex;
   justify-content: center;
@@ -43,47 +45,35 @@ export const BreathingSphere = styled.div`
 
   @keyframes breathe {
     0%, 100% {
-        transform: scale(1);
+        transform: rotate(60deg);
     }
     50% {
-        transform: scale(1.1); /* Aumenta para 1.1x */
+        transform: rotate(180deg);
     }
-  }
-
-  @keyframes changeColor {
-      0% {
-          background: #ff9f24;
-      }
-      50% {
-          background: #ffd700;
-      }
-      100% {
-          background: #ff9f24;
-      }
   }
 `;
 
 const Particle = styled.div`
   position: absolute;
   border-radius: 50%;
-  background-color: #ff9f24;
+  background-color: ${props => props.theme.colors['white']};
   animation: particleMove 2s infinite ease-in-out;
 
   @keyframes particleMove {
     0% {
-        transform: scale(1) translate(0, 0);
+        transform: translate(0, 0);
     }
     25% {
-        transform: scale(1.5) translate(10px, -10px);
+        transform: translate(2px, -2px);
     }
     50% {
-        transform: scale(1) translate(0, 0);
+        transform: translate(0, 0);
     }
     75% {
-        transform: scale(1.5) translate(-10px, 10px);
+        transform: translate(-2px, 2px);
     }
     100% {
-        transform: scale(1) translate(0, 0);
+        transform: translate(0, 0);
     }
 }
 
@@ -92,23 +82,23 @@ const Particle = styled.div`
 export const ParticleOne = styled(Particle)`
   width: 8px;
   height: 8px;
-  top: -10px;
+  top: 20%;
   left: 35%;
   animation-delay: 0s;
 `;
 
 export const ParticleTwo = styled(Particle)`
-  width: 10px;
-  height: 10px;
-  top: 30%;
-  left: 75%;
+  width: 15px;
+  height: 15px;
+  top: 55%;
+  left: 65%;
   animation-delay: 0.3s;
 `;
 
 export const ParticleThree = styled(Particle)`
   width: 6px;
-    height: 6px;
-    top: 50%;
-    left: 10%;
-    animation-delay: 0.6s;
+  height: 6px;
+  top: 50%;
+  left: 10%;
+  animation-delay: 0.6s;
 `;

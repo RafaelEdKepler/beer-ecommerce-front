@@ -8,34 +8,34 @@ export default function ProductListPageView({ list, isLoading, error, onTryAgain
 
   if (isLoading) {
     return <LoadingPortal />
-  } else {
-    return (
-      <ProductListContainer>
-        <HeaderComponent />
-        <TitlePageContainer>
-          <span>Hi Mr. Michael,</span>
-          <h2>Welcome Back!</h2>
-          <h3>Our Products</h3>
-        </TitlePageContainer>
-        {!error ? (
-          <ProductsGridContainer>
-            {list && list.map((product) => (
-              <ProductBoxComponent
-                key={product.id}
-                brand={product.brand}
-                image={product.image}
-                id={product.id}
-                price="$23.30"
-                onClick={onClickProduct}
-              />
-            ))}
-          </ProductsGridContainer>
-        ) : (
-          <ErrorComponent
-            onTryAgain={onTryAgain}
-          />
-        )}
-      </ProductListContainer>
-    )
   }
+
+  return (
+    <ProductListContainer>
+      <HeaderComponent />
+      <TitlePageContainer>
+        <span>Hi Mr. Michael,</span>
+        <h2>Welcome Back!</h2>
+        <h3>Our Products</h3>
+      </TitlePageContainer>
+      {!error ? (
+        <ProductsGridContainer>
+          {list && list.map((product) => (
+            <ProductBoxComponent
+              key={product.id}
+              brand={product.brand}
+              image={product.image}
+              id={product.id}
+              price="$23.30"
+              onClick={onClickProduct}
+            />
+          ))}
+        </ProductsGridContainer>
+      ) : (
+        <ErrorComponent
+          onTryAgain={onTryAgain}
+        />
+      )}
+    </ProductListContainer>
+  )
 }

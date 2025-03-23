@@ -1,3 +1,4 @@
+import { Handbag } from "@phosphor-icons/react";
 import { BagIcon, CartComponentContainer } from "./style";
 
 export default function AddToCartComponent() {

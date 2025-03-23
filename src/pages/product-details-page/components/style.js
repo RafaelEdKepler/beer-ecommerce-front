@@ -78,11 +78,19 @@ export const DescriptionContainer = styled.div`
   p {
     color: ${props => props.theme.colors['gray-400']};
     font-size: 0.75rem;
-
-    b {
-      color: ${props => props.theme.colors['golden-700']};
-      cursor: pointer;
-    }
+    text-overflow: ellipsis;
+    ${props => !props.expanded && `
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    `}
+  }
+  b {
+    font-size: 0.75rem;
+    color: ${props => props.theme.colors['golden-700']};
+    cursor: pointer;
+    white-space: nowrap;
   }
 
   @media (min-width: 760px) {

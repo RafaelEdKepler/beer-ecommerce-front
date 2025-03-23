@@ -1,26 +1,27 @@
 import { DescriptionContainer, ProductTextDetailsContainer, SizeChip, SizeContainer, TitleAndPriceContainer } from "./style";
 
-export default function ProductDataComponent({ data, selectedSize, onShowPrice, onChangeSelectedSize }) {
+export default function ProductDataComponent({ product, sizes, selectedSize, onShowPrice, onChangeSelectedSize, onExpandText, expandedText }) {
+
   return (
     <ProductTextDetailsContainer>
       <TitleAndPriceContainer>
         <div>
-          <h2>{data.product.brand}</h2>
-          <span>Origin: {data.product.origin} | Stock: {data.sizes[selectedSize].stock}</span>
+          <h2>{product.brand}</h2>
+          <span>Origin: {product.origin} | Stock: {sizes ? sizes.stock : 0}</span>
         </div>
         <h3>{onShowPrice()}</h3>
       </TitleAndPriceContainer>
-      <DescriptionContainer>
+      <DescriptionContainer expanded={expandedText ? expandedText : undefined}>
         <h2>Description</h2>
         <p>
-          {data.product.information}
-          <b>Read more</b>
+          {product.information}
         </p>
+        <b onClick={onExpandText}>{expandedText ? "See less" : "Read more"}</b>
       </DescriptionContainer>
       <SizeContainer>
         <h2>Size</h2>
         <div>
-          {data.product.skus.map((size, index) => (
+          {product.skus.map((size, index) => (
             <SizeChip key={size.name} onClick={() => onChangeSelectedSize(index)} selected={index === selectedSize}>
               <span>{size.name}</span>
             </SizeChip>
