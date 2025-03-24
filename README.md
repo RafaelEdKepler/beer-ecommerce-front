@@ -1,51 +1,52 @@
-🍻 Brewery E-commerce Frontend
+# 🍻 Brewery E-commerce Frontend
 
-Welcome to the Brewery E-commerce Frontend, a modern web application built to provide an immersive experience for beer lovers. This project is designed using modern frontend technologies to ensure performance, scalability, and maintainability.
+Welcome to the **Brewery E-commerce Frontend**, a modern web application built to provide an immersive experience for beer lovers. This project is designed using modern frontend technologies to ensure performance, scalability, and maintainability.
 
-🚀 Technologies Used
+## 🚀 Technologies Used
 
-React: Core library for building the UI.
+- **React**: Core library for building the UI.
+- **Vite**: Fast build tool and development server.
+- **Styled-Components**: For component-based styling.
+- **React Query**: Efficient state and server-state management.
+- **Axios**: HTTP client for API requests.
+- **React Router DOM**: Handles navigation between pages.
+- **Phosphor Icons**: Beautiful and flexible icon library.
 
-Vite: Fast build tool and development server.
-
-Styled-Components: For component-based styling.
-
-React Query: Efficient state and server-state management.
-
-Axios: HTTP client for API requests.
-
-React Router DOM: Handles navigation between pages.
-
-Phosphor Icons: Beautiful and flexible icon library.
-
-📦 Installation & Setup
+## 📦 Installation & Setup
 
 To set up the project locally, follow these steps:
 
-1️⃣ Clone the Repository
+### 1️⃣ Clone the repository
 
-2️⃣ Install Dependencies
+```sh
+git clone https://github.com/RafaelEdKepler/beer-ecommerce-front.git
+cd beer-ecommerce-front
+```
 
-`npm install`
+### 2️⃣ Install Dependencies
 
-3️⃣ Start the Development Server
+```sh
+npm install
+```
 
-`npm run dev`
+### 3️⃣ Start the Development Server
 
-By default, the project will be available at http://localhost:5173/.
+```sh
+npm run dev
+```
 
-🛠 How to Use
+By default, the project will be available at `http://localhost:5173/`.
 
-Browse available products.
+## 🛠 How to Use
 
-Select a product to view details and available sizes.
+1. Browse available products.
+2. Select a product to view details and available sizes.
+3. Add your preferred size to the cart.
+4. Proceed to checkout to finalize your order.
 
-Add your preferred size to the cart. (to be implemented)
+## 🔮 Future Enhancements
 
-Proceed to checkout to finalize your order. (to be implemented)
+- **Unit Tests with Vitest**: Implement comprehensive unit testing.
+- **Storybook Integration**: Document and test UI components in isolation.
 
-🔮 Future Enhancements
-
-Unit Tests with Vitest: Implement comprehensive unit testing.
-
-Storybook Integration: Document and test UI components in isolation.
+---
