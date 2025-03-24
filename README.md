@@ -1,6 +1,6 @@
 # 🍻 Brewery E-commerce Frontend
 
-Welcome to the **Brewery E-commerce Frontend**, a modern web application built to provide an immersive experience for beer lovers. This project is designed using modern frontend technologies to ensure performance, scalability, and maintainability.
+Welcome to the **Beer E-commerce Frontend**, a modern web application. This project is designed using modern frontend technologies to ensure performance, scalability, and maintainability.
 
 ## 🚀 Technologies Used
 
