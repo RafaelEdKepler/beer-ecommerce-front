@@ -22,7 +22,7 @@ export default function ProductDetailsPageView({ product, onTryAgain, error, siz
         {!error && product ? (
           <ProductDetailsContainer>
             <ProductImageContainer>
-              <img src={product.image} />
+              <img alt="Photo of selected beer" src={product.image} />
             </ProductImageContainer>
             <ProductDataComponent
               product={product}

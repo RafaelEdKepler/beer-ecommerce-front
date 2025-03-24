@@ -143,10 +143,16 @@ export const SizeChip = styled.div`
   border-radius: 15.5px;
   transition: 0.2s;
   padding: 0.1rem;
+  overflow: hidden;
+
 
   span {
     font-size: 0.75rem;
     font-weight: 400;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 100%;
   }
 
   &:hover {

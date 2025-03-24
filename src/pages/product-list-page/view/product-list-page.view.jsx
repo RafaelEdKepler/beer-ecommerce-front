@@ -1,3 +1,4 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
 import ErrorComponent from "../../../components/error/error.component";
 import HeaderComponent from "../../../components/header/header.component";
@@ -12,14 +13,6 @@ export default function ProductListPageView({ list, isLoading, error, onTryAgain
   if (isLoading) {
     return <LoadingPortal />
   }
-
-  /*
-  "product-list": {
-    "hi": "Hi, {{name}}",
-    "welcome-back": "Welcome Back!",
-    "our-products": "Our Products"
-  }
-  */
 
   return (
     <ProductListContainer>
@@ -39,7 +32,7 @@ export default function ProductListPageView({ list, isLoading, error, onTryAgain
               brand={product.brand}
               image={product.image}
               id={product.id}
-              price="$23.30"
+              price={product.minPrice}
               onClick={onClickProduct}
             />
           ))}

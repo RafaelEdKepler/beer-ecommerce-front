@@ -1,12 +1,51 @@
-# React + Vite
+🍻 Brewery E-commerce Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Brewery E-commerce Frontend, a modern web application built to provide an immersive experience for beer lovers. This project is designed using modern frontend technologies to ensure performance, scalability, and maintainability.
 
-Currently, two official plugins are available:
+🚀 Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React: Core library for building the UI.
 
-## Expanding the ESLint configuration
+Vite: Fast build tool and development server.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Styled-Components: For component-based styling.
+
+React Query: Efficient state and server-state management.
+
+Axios: HTTP client for API requests.
+
+React Router DOM: Handles navigation between pages.
+
+Phosphor Icons: Beautiful and flexible icon library.
+
+📦 Installation & Setup
+
+To set up the project locally, follow these steps:
+
+1️⃣ Clone the Repository
+
+2️⃣ Install Dependencies
+
+`npm install`
+
+3️⃣ Start the Development Server
+
+`npm run dev`
+
+By default, the project will be available at http://localhost:5173/.
+
+🛠 How to Use
+
+Browse available products.
+
+Select a product to view details and available sizes.
+
+Add your preferred size to the cart. (to be implemented)
+
+Proceed to checkout to finalize your order. (to be implemented)
+
+🔮 Future Enhancements
+
+Unit Tests with Vitest: Implement comprehensive unit testing.
+
+Storybook Integration: Document and test UI components in isolation.

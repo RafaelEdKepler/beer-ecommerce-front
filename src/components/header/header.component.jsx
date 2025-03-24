@@ -1,3 +1,4 @@
+import React from "react";
 import { ArrowLeft, DotsThree, List } from "@phosphor-icons/react";
 import { HeaderContainer } from "./style";
 import UserIcon from "../../assets/user-icon.jpg"
@@ -13,12 +14,12 @@ export default function HeaderComponent({ title }) {
         <HeaderContainer>
           <ArrowLeft onClick={() => navigate(-1)} />
           <span>{title}</span>
-          <DotsThree />
+          <DotsThree onClick={() => window.alert("Menu opened")} />
         </HeaderContainer>
       ) : (
         <HeaderContainer>
           <List />
-          <img src={UserIcon} />
+          <img src={UserIcon} alt="Your perfil image" onClick={() => window.alert("Perfil opened")} />
         </HeaderContainer>
       )}
     </>

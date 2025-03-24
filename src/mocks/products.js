@@ -7,6 +7,7 @@ export const productsList = [
     substyle: "Light Lager",
     abv: "4.4%",
     origin: "Import",
+    price: "$23.30",
     information: "#2 selling imported beer in the US with nearly 60 million cases in annual sales (2), growing more than 15 million cases over the past 2 years (3). A full flavored Mexican lager consistently delivering a crisp, clean taste that has stood the test of time for 90 years. Modelo Especial embodies substance with style - a straightforward, uncomplicated and consistent experience with an understated style.\nModelo Especial earned the 2012 Market Watch \"Beer Brand of the Year\" due to 20 straight years of double-digit growth earning.",
     skus: [
       {
@@ -26,6 +27,7 @@ export const productsList = [
   {
     id: 374,
     brand: "Miller Lite",
+    price: "$23.30",
     image: "/products/miller-lite.png",
     style: "Lager",
     substyle: "Light Lager",
@@ -46,6 +48,7 @@ export const productsList = [
   {
     id: 743,
     brand: "Corona Premier",
+    price: "$23.30",
     image: "/products/corona.jpg",
     style: "Lager",
     substyle: "Mexican Lager",
@@ -66,6 +69,7 @@ export const productsList = [
   {
     id: 841,
     brand: "Budweiser",
+    price: "$23.30",
     image: "/products/budweiser.jpg",
     style: "Lager",
     substyle: "American Lager",
